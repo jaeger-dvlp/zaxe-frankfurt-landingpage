@@ -10,10 +10,15 @@ export default function buttonsNav() {
     setPrinter(e.target.innerText);
   };
 
-  const elms = buttons.map((printerName) => {
+  const elms = buttons.map((printerName, i) => {
     if (printerName === selectedPrinter) {
       return (
-        <div className="p-3" key={`${printerName}Button`}>
+        <div
+          data-aos="fade-down"
+          data-aos-delay={`150` * i}
+          className="p-3"
+          key={`${printerName}Button`}
+        >
           <button
             type="button"
             onClick={buttonSetPrinter}
@@ -26,7 +31,12 @@ export default function buttonsNav() {
       );
     } else {
       return (
-        <div className="p-3" key={`${printerName}Button`}>
+        <div
+          data-aos="fade-down"
+          data-aos-delay={`150` * i}
+          className="p-3"
+          key={`${printerName}Button`}
+        >
           <button
             type="button"
             onClick={buttonSetPrinter}
@@ -44,7 +54,11 @@ export default function buttonsNav() {
     <div className="container mx-auto p-0 py-5">
       <div className="flex flex-wrap justify-start">
         {elms}
-        <div className="w-full pl-3 buttonHint text-xs text-gray-400">
+        <div
+          data-aos="fade-in"
+          data-aos-delay="600"
+          className="w-full pl-3 buttonHint text-xs text-gray-400"
+        >
           <span>*</span>Please select one of the above devices for
           specification.
         </div>
