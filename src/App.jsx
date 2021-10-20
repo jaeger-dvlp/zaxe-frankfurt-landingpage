@@ -15,7 +15,7 @@ AOS.init({
 function App() {
   return (
     <ContextProvider value="null">
-      <div data-aos="fade-in" className="App">
+      <div data-aos="fade-in">
         <Header />
         <PrintersNav />
         <PrinterContent />
