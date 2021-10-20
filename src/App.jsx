@@ -5,8 +5,12 @@ import 'aos/dist/aos.css';
 import { ContextProvider } from './ContextApi';
 import Header from './Components/Header';
 import PrintersNav from './Components/PrintersNav';
+import PrinterContent from './Components/PrinterContent';
 
-AOS.init();
+AOS.init({
+  mirror: true,
+  startEvent: 'DOMContentLoaded',
+});
 
 function App() {
   return (
@@ -14,6 +18,7 @@ function App() {
       <div data-aos="fade-in" className="App">
         <Header />
         <PrintersNav />
+        <PrinterContent />
       </div>
     </ContextProvider>
   );
