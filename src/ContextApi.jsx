@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 const Contexts = React.createContext();
-
 class ContextProvider extends Component {
   state = {
     selectedPrinter: 'Z3',
@@ -10,31 +9,30 @@ class ContextProvider extends Component {
       {
         sectionName: 'xlite+',
         sectionCategories: [
-          { categoryName: 'Dimensions', categoryContent: '' },
-          { categoryName: 'Printhead', categoryContent: '' },
-          { categoryName: 'Printare', categoryContent: '' },
-          { categoryName: 'Filter', categoryContent: '' },
-          { categoryName: 'Electronics', categoryContent: '' },
+          { categoryName: 'Dimensions', categoryContent: '', selected: true },
+          { categoryName: 'Printhead', categoryContent: '', selected: false },
+          { categoryName: 'Printarea', categoryContent: '', selected: false },
+          { categoryName: 'Electronics', categoryContent: '', selected: false },
         ],
       },
       {
         sectionName: 'Z3',
         sectionCategories: [
-          { categoryName: 'Dimensions', categoryContent: '' },
-          { categoryName: 'Printhead', categoryContent: '' },
-          { categoryName: 'Printare', categoryContent: '' },
-          { categoryName: 'Filter', categoryContent: '' },
-          { categoryName: 'Electronics', categoryContent: '' },
+          { categoryName: 'Dimensions', categoryContent: '', selected: false },
+          { categoryName: 'Printhead', categoryContent: '', selected: true },
+          { categoryName: 'Printarea', categoryContent: '', selected: false },
+          { categoryName: 'Filter', categoryContent: '', selected: false },
+          { categoryName: 'Electronics', categoryContent: '', selected: false },
         ],
       },
       {
         sectionName: 'Z3+',
         sectionCategories: [
-          { categoryName: 'Dimensions', categoryContent: '' },
-          { categoryName: 'Printhead', categoryContent: '' },
-          { categoryName: 'Printare', categoryContent: '' },
-          { categoryName: 'Filter', categoryContent: '' },
-          { categoryName: 'Electronics', categoryContent: '' },
+          { categoryName: 'Dimensions', categoryContent: '', selected: false },
+          { categoryName: 'Printhead', categoryContent: '', selected: false },
+          { categoryName: 'Printarea', categoryContent: '', selected: false },
+          { categoryName: 'Filter', categoryContent: '', selected: true },
+          { categoryName: 'Electronics', categoryContent: '', selected: false },
         ],
       },
     ],
