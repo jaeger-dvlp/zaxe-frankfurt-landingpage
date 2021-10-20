@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 
 import Contexts from '../ContextApi';
 
-export default function PrintersNav() {
+export default function buttonsNav() {
   const { setPrinter } = useContext(Contexts);
-  const { selectedPrinter, printers } = useContext(Contexts);
+  const { selectedPrinter, buttons } = useContext(Contexts);
 
   const buttonSetPrinter = (e) => {
     setPrinter(e.target.innerText);
   };
 
-  const elms = printers.map((printerName) => {
+  const elms = buttons.map((printerName) => {
     if (printerName === selectedPrinter) {
       return (
         <div className="p-3" key={`${printerName}Button`}>

@@ -5,7 +5,7 @@ const Contexts = React.createContext();
 class ContextProvider extends Component {
   state = {
     selectedPrinter: 'Z3',
-    printers: ['xlite+', 'Z2', 'Z3'],
+    buttons: ['xlite+', 'Z3', 'Z3+', 'Materials'],
   };
 
   setPrinter = (selectedPrinter) => {
@@ -14,11 +14,11 @@ class ContextProvider extends Component {
 
   render() {
     const { children } = this.props;
-    const { selectedPrinter, printers } = this.state;
+    const { selectedPrinter, buttons } = this.state;
     const { setPrinter } = this;
 
     return (
-      <Contexts.Provider value={{ selectedPrinter, setPrinter, printers }}>
+      <Contexts.Provider value={{ selectedPrinter, setPrinter, buttons }}>
         {children}
       </Contexts.Provider>
     );
