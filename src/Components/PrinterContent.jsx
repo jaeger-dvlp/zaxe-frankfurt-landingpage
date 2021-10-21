@@ -14,6 +14,7 @@ export default function PrinterContent() {
             <div
               key={`${selectedPrinter}${sect.sectionName}Content`}
               className="flex printerContentSection max-h-96 p-0"
+              style={{ minHeight: '24rem' }}
             >
               <div
                 className="w-1/2 p-3 items-start content-center flex flex-wrap justify-start"
@@ -26,7 +27,12 @@ export default function PrinterContent() {
                 </div>
                 <div
                   className="mt-1 w-96 "
-                  style={{ height: '2px', backgroundColor: '#009ade' }}
+                  style={{
+                    height: '2px',
+                    backgroundColor: '#009ade',
+                    marginLeft: '-50%',
+                    width: '100%',
+                  }}
                 ></div>
                 <div
                   dangerouslySetInnerHTML={{ __html: cont.categoryContent }}
