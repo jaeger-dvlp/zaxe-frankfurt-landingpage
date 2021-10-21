@@ -68,21 +68,50 @@ class ContextProvider extends Component {
           { categoryName: 'Electronics', categoryContent: '', selected: false },
         ],
       },
+      {
+        sectionName: 'Materials',
+        sectionCategories: [
+          {
+            categoryName: 'Zaxe PLA',
+            categoryContent: `<span>Zaxe PLA is lorem ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>`,
+            imageURL: 'https://zaxe.com/public/svg-main/naturalFla.png',
+            selected: true,
+          },
+          { categoryName: 'Printhead', categoryContent: '', selected: false },
+          { categoryName: 'Printarea', categoryContent: '', selected: false },
+          { categoryName: 'Filter', categoryContent: '', selected: false },
+          { categoryName: 'Electronics', categoryContent: '', selected: false },
+        ],
+      },
     ],
   };
 
   setPrinter = (selectedPrinter) => {
     this.setState((prev) => ({ selectedPrinter }));
   };
+  setContent = () => {
+    console.log('a');
+  };
 
   render() {
     const { children } = this.props;
-    const { selectedPrinter, buttons, sections } = this.state;
-    const { setPrinter } = this;
+    const { selectedPrinter, sectionButtons, buttons, sections } = this.state;
+    const { setPrinter, setContent } = this;
 
     return (
       <Contexts.Provider
-        value={{ selectedPrinter, setPrinter, buttons, sections }}
+        value={{
+          selectedPrinter,
+          setContent,
+          setPrinter,
+          sectionButtons,
+          buttons,
+          sections,
+        }}
       >
         {children}
       </Contexts.Provider>
