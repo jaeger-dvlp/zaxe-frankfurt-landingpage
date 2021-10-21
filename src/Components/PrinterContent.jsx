@@ -3,8 +3,14 @@ import React, { useContext, useState } from 'react';
 import Contexts from '../ContextApi';
 
 export default function PrinterContent() {
-  const { selectedPrinter, sections } = useContext(Contexts);
+  const { selectedPrinter, sections, setImage, setImageStatus } =
+    useContext(Contexts);
   const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const activateImageViewer = (e) => {
+    setImage(e.target.getAttribute('src'));
+    setImageStatus('viewerActive');
+  };
 
   const elm = sections.map((sect) => {
     if (sect.sectionName === selectedPrinter) {
@@ -45,7 +51,11 @@ export default function PrinterContent() {
                 data-aos-easing="ease-in-out-back"
                 data-aos-duration="800"
               >
-                <img src={cont.imageURL} alt={`${selectedPrinter}Image`} />
+                <img
+                  onClick={activateImageViewer}
+                  src={cont.imageURL}
+                  alt={`${selectedPrinter}Image`}
+                />
               </div>
             </div>
           );
