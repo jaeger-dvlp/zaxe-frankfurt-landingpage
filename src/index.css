@@ -7,6 +7,7 @@
 body,
 html {
   overflow-x: hidden !important;
+  background-color: #ecf6f8;
 }
 
 * {
@@ -65,4 +66,39 @@ button.contentNavBtn.activeContent {
 
 .buttonHint span {
   color: #009ade;
+}
+
+.imageViewer {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.imageViewer.viewerActive {
+  visibility: visible;
+  opacity: 1;
+}
+
+.imageViewer img {
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  height: 95% !important;
+}
+
+.imageViewer .closeBtn {
+  position: absolute;
+  right: 50px;
+  top: 40px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
 }
