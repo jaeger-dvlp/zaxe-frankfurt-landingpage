@@ -11,7 +11,10 @@ export default function PrinterContent() {
       return sect.sectionCategories.map((cont) => {
         if (cont.selected === true) {
           return (
-            <div className="flex p-0">
+            <div
+              key={`${selectedPrinter}${sect.sectionName}Content`}
+              className="flex p-0"
+            >
               <div
                 className="w-1/2 p-3 items-start content-start flex flex-wrap justify-start"
                 data-aos="fade-right"
