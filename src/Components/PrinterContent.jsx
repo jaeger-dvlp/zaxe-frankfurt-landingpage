@@ -11,24 +11,37 @@ export default function PrinterContent() {
       return sect.sectionCategories.map((cont) => {
         if (cont.selected === true) {
           return (
-            <div
-              key={`${cont.categoryName}${selectedPrinter}`}
-              className="w-1/2 p-3 min-h-0 flex flex-wrap"
-              data-aos="fade-right"
-              data-aos-easing="ease-in-out-back"
-              data-aos-duration="700"
-            >
-              <div className="categoryHeader w-full text-4xl ">
-                {cont.categoryName}
+            <div className="flex p-0">
+              <div
+                className="w-1/2 p-3 items-start content-start flex flex-wrap justify-start"
+                data-aos="fade-right"
+                data-aos-easing="ease-in-out-back"
+                data-aos-duration="800"
+              >
+                <div className="categoryHeader w-full text-4xl ">
+                  {cont.categoryName}
+                </div>
+                <div
+                  className="mt-1 w-96 "
+                  style={{ height: '2px', backgroundColor: '#009ade' }}
+                ></div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: cont.categoryContent }}
+                  className="categoryContent w-full py-2 text-lg whitespace-pre-wrap"
+                ></div>
               </div>
               <div
-                className="mt-1 w-96"
-                style={{ height: '2px', backgroundColor: '#009ade' }}
-              ></div>
-              <div
-                dangerouslySetInnerHTML={{ __html: cont.categoryContent }}
-                className="categoryContent w-full py-2 h-80 text-lg whitespace-pre-wrap"
-              ></div>
+                className="w-1/2 p-3 min-h-0 flex flex-wrap align-middle"
+                data-aos="fade-left"
+                data-aos-easing="ease-in-out-back"
+                data-aos-duration="800"
+              >
+                <img
+                  className="w-full"
+                  src={cont.imageURL}
+                  alt={`${selectedPrinter}Image`}
+                />
+              </div>
             </div>
           );
         }
@@ -37,11 +50,14 @@ export default function PrinterContent() {
   });
 
   return (
-    <div className="container mx-auto  py-10">
-      <div className="w-full flex justify-center align-middle p-0">
-        {elm}
-        <div className="w-1/2">Image</div>
-      </div>
+    <div
+      className="container mx-auto py-10"
+      data-aos="fade-down"
+      data-aos-delay="800"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out-back"
+    >
+      {elm}
     </div>
   );
 }
