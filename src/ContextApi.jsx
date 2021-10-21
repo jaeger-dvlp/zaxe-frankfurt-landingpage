@@ -17,6 +17,7 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic </span>
 <span>Filament Sensor</span>`,
+            imageURL: 'https://zaxe.com/wp-content/uploads/2021/09/xlite-4.png',
             selected: true,
           },
           { categoryName: 'Printhead', categoryContent: '', selected: false },
@@ -26,6 +27,7 @@ class ContextProvider extends Component {
       },
       {
         sectionName: 'Z3',
+
         sectionCategories: [
           {
             categoryName: 'Dimensions',
@@ -35,13 +37,11 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic and Z Tilt</span>
 <span>Filament Sensor</span>`,
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/09/Z3-e1632095337489.png',
             selected: true,
           },
-          {
-            categoryName: 'Printhead',
-            categoryContent: '',
-            selected: false,
-          },
+          { categoryName: 'Printhead', categoryContent: '', selected: false },
           { categoryName: 'Printarea', categoryContent: '', selected: false },
           { categoryName: 'Filter', categoryContent: '', selected: false },
           { categoryName: 'Electronics', categoryContent: '', selected: false },
@@ -56,8 +56,10 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Filament Diameter : </span> <span>1.75</span>
 <span class=" font-semibold">Print Volume : </span> <span>400 x 300 x 350 mm</span>
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
-<span class=" font-semibold">Calibration : </span> <span>Fully Automatic</span>
+<span class=" font-semibold">Calibration : </span> <span>Fully Automatic and Z Tilt</span>
 <span>Filament Sensor</span>`,
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/09/Urun-sayfasi-Z3-tasarim.png',
             selected: true,
           },
           { categoryName: 'Printhead', categoryContent: '', selected: false },
