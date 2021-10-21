@@ -6,6 +6,7 @@ import { ContextProvider } from './ContextApi';
 import Header from './Components/Header';
 import PrintersNav from './Components/PrintersNav';
 import PrinterContent from './Components/PrinterContent';
+import ContentNav from './Components/ContentNav';
 
 AOS.init({
   mirror: true,
@@ -19,6 +20,7 @@ function App() {
         <Header />
         <PrintersNav />
         <PrinterContent />
+        <ContentNav />
       </div>
     </ContextProvider>
   );
