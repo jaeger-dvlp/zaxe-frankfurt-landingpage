@@ -34,3 +34,8 @@ button.printerNavBtn.activePrinter {
 .buttonHint span {
   color: #009ade;
 }
+
+body,
+html {
+  overflow-x: hidden !important;
+}
