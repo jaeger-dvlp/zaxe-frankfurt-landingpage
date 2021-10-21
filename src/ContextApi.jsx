@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 const Contexts = React.createContext();
 class ContextProvider extends Component {
   state = {
+    selectedImage: '',
+    imageViewerStatus: '',
     selectedPrinter: 'Z3',
     buttons: ['xlite+', 'Z3', 'Z3+', 'Materials'],
     sections: [
@@ -93,14 +95,29 @@ class ContextProvider extends Component {
   setPrinter = (selectedPrinter) => {
     this.setState((prev) => ({ selectedPrinter }));
   };
+
+  setImage = (selectedImage) => {
+    this.setState((prev) => ({ selectedImage }));
+  };
+  setImageStatus = (imageViewerStatus) => {
+    this.setState((prev) => ({ imageViewerStatus }));
+  };
+
   setContent = () => {
     console.log('a');
   };
 
   render() {
     const { children } = this.props;
-    const { selectedPrinter, sectionButtons, buttons, sections } = this.state;
-    const { setPrinter, setContent } = this;
+    const {
+      selectedPrinter,
+      sectionButtons,
+      buttons,
+      sections,
+      selectedImage,
+      imageViewerStatus,
+    } = this.state;
+    const { setPrinter, setContent, setImage, setImageStatus } = this;
 
     return (
       <Contexts.Provider
@@ -108,9 +125,13 @@ class ContextProvider extends Component {
           selectedPrinter,
           setContent,
           setPrinter,
+          setImage,
+          setImageStatus,
           sectionButtons,
           buttons,
           sections,
+          selectedImage,
+          imageViewerStatus,
         }}
       >
         {children}
