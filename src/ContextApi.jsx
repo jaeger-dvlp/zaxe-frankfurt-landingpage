@@ -52,9 +52,9 @@ class ContextProvider extends Component {
         sectionCategories: [
           {
             categoryName: 'Dimensions',
-            categoryContent: `<span>Dual Printhead</span>
+            categoryContent: `<span>Dual Independent Printhead</span>
 <span class=" font-semibold">Filament Diameter : </span> <span>1.75</span>
-<span class=" font-semibold">Print Volume : </span> <span>400 x 300 x 350 mm</span>
+<span class=" font-semibold">Print Volume : </span> <span>300 x 300 x 300 mm</span>
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic and Z Tilt</span>
 <span>Filament Sensor</span>`,
