@@ -13,7 +13,7 @@ export default function PrinterContent() {
           return (
             <div
               key={`${selectedPrinter}${sect.sectionName}Content`}
-              className="flex printerContentSection max-h-96 p-0"
+              className="flex  printerContentSection max-h-96 p-0"
               style={{ minHeight: '24rem' }}
             >
               <div
@@ -40,20 +40,12 @@ export default function PrinterContent() {
                 ></div>
               </div>
               <div
-                className="w-1/2 p-3 min-h-0 flex justify-center content-center align-middle"
+                className="w-1/2 p-3 flex justify-center content-center align-middle"
                 data-aos="fade-left"
                 data-aos-easing="ease-in-out-back"
                 data-aos-duration="800"
               >
-                <img
-                  src={cont.imageURL}
-                  alt={`${selectedPrinter}Image`}
-                  style={{
-                    position: 'relative',
-                    top: '-110px',
-                    backgroundSize: '200%',
-                  }}
-                />
+                <img src={cont.imageURL} alt={`${selectedPrinter}Image`} />
               </div>
             </div>
           );
@@ -64,7 +56,7 @@ export default function PrinterContent() {
 
   return (
     <div
-      className="container mx-auto py-10"
+      className="container mx-auto py-5"
       data-aos="fade-down"
       data-aos-delay="800"
       data-aos-duration="500"
