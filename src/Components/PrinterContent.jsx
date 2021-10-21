@@ -17,7 +17,7 @@ export default function PrinterContent() {
               style={{ minHeight: '24rem' }}
             >
               <div
-                className="w-1/2 p-3 items-start content-center flex flex-wrap justify-start"
+                className="w-1/2 p-3 items-start content-start flex flex-wrap justify-start"
                 data-aos="fade-right"
                 data-aos-easing="ease-in-out-back"
                 data-aos-duration="800"
