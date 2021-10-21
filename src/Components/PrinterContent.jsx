@@ -16,7 +16,7 @@ export default function PrinterContent() {
               className="flex printerContentSection max-h-96 p-0"
             >
               <div
-                className="w-1/2 p-3 items-start content-start flex flex-wrap justify-start"
+                className="w-1/2 p-3 items-start content-center flex flex-wrap justify-start"
                 data-aos="fade-right"
                 data-aos-easing="ease-in-out-back"
                 data-aos-duration="800"
@@ -34,7 +34,7 @@ export default function PrinterContent() {
                 ></div>
               </div>
               <div
-                className="w-1/2 p-3 min-h-0 flex justify-center content-start align-top"
+                className="w-1/2 p-3 min-h-0 flex justify-center content-center align-middle"
                 data-aos="fade-left"
                 data-aos-easing="ease-in-out-back"
                 data-aos-duration="800"
