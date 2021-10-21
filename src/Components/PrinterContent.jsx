@@ -13,7 +13,7 @@ export default function PrinterContent() {
           return (
             <div
               key={`${selectedPrinter}${sect.sectionName}Content`}
-              className="flex p-0"
+              className="flex printerContentSection max-h-96 p-0"
             >
               <div
                 className="w-1/2 p-3 items-start content-start flex flex-wrap justify-start"
@@ -34,13 +34,13 @@ export default function PrinterContent() {
                 ></div>
               </div>
               <div
-                className="w-1/2 p-3 min-h-0 flex flex-wrap align-middle"
+                className="w-1/2 p-3 min-h-0 flex justify-center content-start align-top"
                 data-aos="fade-left"
                 data-aos-easing="ease-in-out-back"
                 data-aos-duration="800"
               >
                 <img
-                  className="w-full"
+                  height="100%"
                   src={cont.imageURL}
                   alt={`${selectedPrinter}Image`}
                 />
