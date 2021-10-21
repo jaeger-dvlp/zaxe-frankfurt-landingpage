@@ -46,9 +46,13 @@ export default function PrinterContent() {
                 data-aos-duration="800"
               >
                 <img
-                  height="100%"
                   src={cont.imageURL}
                   alt={`${selectedPrinter}Image`}
+                  style={{
+                    position: 'relative',
+                    top: '-110px',
+                    backgroundSize: '200%',
+                  }}
                 />
               </div>
             </div>
