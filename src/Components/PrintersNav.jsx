@@ -51,7 +51,7 @@ export default function buttonsNav() {
   });
 
   return (
-    <div className="container mx-auto p-0 py-5">
+    <div className="container mx-auto p-0 py-2">
       <div className="flex flex-wrap justify-start">
         {elms}
         <div
