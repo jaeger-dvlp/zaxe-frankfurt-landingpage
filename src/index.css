@@ -101,4 +101,5 @@ button.contentNavBtn.activeContent {
   font-size: 25px;
   color: white;
   cursor: pointer;
+  z-index: 200;
 }
