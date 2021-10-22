@@ -19,7 +19,7 @@ export default function PrinterContent() {
           return (
             <div
               key={`${selectedPrinter}${sect.sectionName}Content`}
-              className="flex md:flex-nowrap flex-wrap xs:flex-wrap printerContentSection  p-0"
+              className="flex flex-wrap printerContentSection  p-0"
               style={{ minHeight: '24rem' }}
             >
               <div
