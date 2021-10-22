@@ -59,7 +59,7 @@ button.contentNavBtn.activeContent {
   text-align: center;
   min-width: 7.5rem;
   font-weight: 500;
-  border-left: 4px solid #009ade;
+  border-left: 5px solid #009ade;
   border-bottom: 2px solid #009ade;
   transition: all 0.2s;
 }
