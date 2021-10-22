@@ -39,26 +39,25 @@ button.printerNavBtn.activePrinter {
 
 button.contentNavBtn {
   background-color: transparent;
-  color: black;
+  color: rgb(63, 63, 63);
   border-radius: 0px;
   padding: 5px 10px !important;
   vertical-align: middle;
   text-align: center;
   min-width: 7.5rem;
   font-weight: 400;
-  border-left: 4px solid transparent;
-  border-bottom: 1px solid transparent;
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
   transition: all 0.2s;
 }
 button.contentNavBtn.activeContent {
   background-color: transparent;
-  color: black;
+  color: rgb(0, 0, 0);
   border-radius: 0px;
   padding: 5px 10px !important;
   vertical-align: middle;
   text-align: center;
   min-width: 7.5rem;
-  font-weight: 500;
   border-left: 5px solid #009ade;
   border-bottom: 2px solid #009ade;
   transition: all 0.2s;
