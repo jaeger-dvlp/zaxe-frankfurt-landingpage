@@ -103,8 +103,18 @@ class ContextProvider extends Component {
     this.setState((prev) => ({ imageViewerStatus }));
   };
 
-  setContent = () => {
-    console.log('a');
+  setContent = (selectedPrinterIncoming, contentButtonInner) => {
+    this.state.sections.map((section) => {
+      if (section.sectionName === selectedPrinterIncoming) {
+        section.sectionCategories.map((category) => {
+          if (category.categoryName === contentButtonInner) {
+            category.selected = true;
+          } else {
+            category.selected = false;
+          }
+        });
+      }
+    });
   };
 
   render() {
