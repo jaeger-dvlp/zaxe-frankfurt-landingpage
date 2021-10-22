@@ -83,10 +83,36 @@ class ContextProvider extends Component {
             imageURL: 'https://zaxe.com/public/svg-main/naturalFla.png',
             selected: true,
           },
-          { categoryName: 'Printhead', categoryContent: '', selected: false },
-          { categoryName: 'Printarea', categoryContent: '', selected: false },
-          { categoryName: 'Filter', categoryContent: '', selected: false },
-          { categoryName: 'Electronics', categoryContent: '', selected: false },
+          {
+            categoryName: 'Zaxe ABS',
+            categoryContent: `<span>Zaxe PLA is lorem ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>`,
+            imageURL: 'https://zaxe.com/public/svg-main/blueFla.png',
+            selected: false,
+          },
+          {
+            categoryName: 'Zaxe PETG',
+            categoryContent: `<span>Zaxe PLA is lorem ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>`,
+            imageURL: 'https://zaxe.com/public/svg-main/greenFla.png',
+            selected: false,
+          },
+          {
+            categoryName: 'Zaxe FLEX',
+            categoryContent: `<span>Zaxe PLA is lorem ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>
+<span class=" font-semibold">Lorem : </span> <span>ipsum</span>`,
+            imageURL: 'https://zaxe.com/public/svg-main/yellowFla.png',
+            selected: false,
+          },
         ],
       },
     ],
@@ -104,17 +130,20 @@ class ContextProvider extends Component {
   };
 
   setContent = (selectedPrinterIncoming, contentButtonInner) => {
-    this.state.sections.map((section) => {
-      if (section.sectionName === selectedPrinterIncoming) {
-        section.sectionCategories.map((category) => {
-          if (category.categoryName === contentButtonInner) {
-            category.selected = true;
-          } else {
-            category.selected = false;
-          }
-        });
-      }
-    });
+    this.setState((prev) =>
+      this.state.sections.map((section) => {
+        if (section.sectionName === selectedPrinterIncoming) {
+          section.sectionCategories.map((category) => {
+            console.log(category.selected);
+            if (category.categoryName === contentButtonInner) {
+              category.selected = true;
+            } else if (category.categoryName !== contentButtonInner) {
+              category.selected = false;
+            }
+          });
+        }
+      })
+    );
   };
 
   render() {
