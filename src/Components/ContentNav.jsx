@@ -7,52 +7,61 @@ export default function contentNav() {
   const { selectedPrinter, sections } = useContext(Contexts);
 
   const buttonSetContent = (e) => {
-    setContent(e.target.innerText);
+    setContent(selectedPrinter, e.target.getAttribute('content'));
   };
 
-  const elms = sections.map((theSect, i) => {
-    theSect.sectionCategories.map((theCat) => {
-      if (theCat.selected === true) {
-        return (
-          <div
-            data-aos="fade-down"
-            data-aos-delay={`150` * i}
-            className="p-3"
-            key={`${theCat.categoryName}ContentButton`}
-          >
-            <button
-              type="button"
-              onClick={buttonSetContent}
-              printer={'xlite+'}
-              className="contentNavBtn activePrinter"
+  const contentElms = sections.map((section) => {
+    if (section.sectionName === selectedPrinter) {
+      return section.sectionCategories.map((category, i) => {
+        if (category.selected === true) {
+          return (
+            <div
+              data-aos="fade-down"
+              data-aos-delay={`150` * i}
+              className="p-3"
+              key={`${category.categoryName}ContentButton`}
             >
-              {i + 1} - {theCat.categoryName}
-            </button>
-          </div>
-        );
-      } else {
-        <div
-          data-aos="fade-down"
-          data-aos-delay={`150` * i}
-          className="p-3"
-          key={`${theCat.categoryName}ContentButton`}
-        >
-          <button
-            type="button"
-            onClick={buttonSetContent}
-            printer={'xlite+'}
-            className="contentNavBtn"
-          >
-            {i + 1} - {theCat.categoryName}
-          </button>
-        </div>;
-      }
-    });
+              <button
+                type="button"
+                onClick={buttonSetContent}
+                printer={'xlite+'}
+                className="contentNavBtn activeContent"
+              >
+                {i + 1} - {category.categoryName}
+              </button>
+            </div>
+          );
+        } else {
+          return (
+            <div
+              data-aos="fade-down"
+              data-aos-delay={`150` * i}
+              className="p-3"
+              key={`${category.categoryName}ContentButton`}
+            >
+              <button
+                type="button"
+                onClick={buttonSetContent}
+                printer={'xlite+'}
+                className="contentNavBtn"
+                content={category.categoryName}
+              >
+                {i + 1} - {category.categoryName}
+              </button>
+            </div>
+          );
+        }
+      });
+    }
   });
 
   return (
-    <div className="container mx-auto p-0 py-2">
-      <div className="flex flex-wrap justify-start">{elms}</div>
+    <div
+      data-aos="fade-right"
+      data-aos-delay="1200"
+      className="container mx-auto p-0 py-2"
+    >
+      <div className="flex  justify-start">{contentElms}</div>
     </div>
   );
 }
