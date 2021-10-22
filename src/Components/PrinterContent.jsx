@@ -19,11 +19,11 @@ export default function PrinterContent() {
           return (
             <div
               key={`${selectedPrinter}${sect.sectionName}Content`}
-              className="flex  printerContentSection max-h-96 p-0"
+              className="flex md:flex-nowrap flex-wrap xs:flex-wrap printerContentSection max-h-96 p-0"
               style={{ minHeight: '24rem' }}
             >
               <div
-                className="w-1/2 p-3 items-start content-start flex flex-wrap justify-start"
+                className="md:w-1/2 w-full p-3 items-start content-start flex flex-wrap justify-start"
                 data-aos="fade-right"
                 data-aos-easing="ease-in-out-back"
                 data-aos-duration="800"
@@ -46,7 +46,7 @@ export default function PrinterContent() {
                 ></div>
               </div>
               <div
-                className="w-1/2 p-3 flex justify-center content-center align-middle"
+                className="md:w-1/2 w-full p-3 flex justify-center content-center align-middle"
                 data-aos="fade-left"
                 data-aos-easing="ease-in-out-back"
                 data-aos-duration="800"
