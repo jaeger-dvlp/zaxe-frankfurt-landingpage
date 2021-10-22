@@ -19,7 +19,7 @@ export default function PrinterContent() {
           return (
             <div
               key={`${selectedPrinter}${sect.sectionName}Content`}
-              className="flex md:flex-nowrap flex-wrap xs:flex-wrap printerContentSection max-h-96 p-0"
+              className="flex md:flex-nowrap flex-wrap xs:flex-wrap printerContentSection  p-0"
               style={{ minHeight: '24rem' }}
             >
               <div
@@ -52,9 +52,11 @@ export default function PrinterContent() {
                 data-aos-duration="800"
               >
                 <img
+                  className="self-center"
                   onClick={activateImageViewer}
                   src={cont.imageURL}
                   alt={`${selectedPrinter}Image`}
+                  style={{ maxHeight: '348px' }}
                 />
               </div>
             </div>
