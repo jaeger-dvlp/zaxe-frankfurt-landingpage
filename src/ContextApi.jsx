@@ -19,7 +19,8 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Print Volume : </span> <span>220 x 230 x 200 mm</span>
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic </span>
-<span>Filament Sensor</span>`,
+<span>Filament Sensor</span>\n
+<span><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/xlite-2.png"/></span>`,
             imageURL: 'https://zaxe.com/wp-content/uploads/2021/09/xlite-4.png',
           },
           {
@@ -32,9 +33,9 @@ class ContextProvider extends Component {
           {
             categoryName: 'Printarea',
             selected: false,
-            categoryContent: 'No data provided.',
+            categoryContent: 'Flexible Printarea.',
             imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+              'https://zaxe.com/wp-content/uploads/2021/09/9M4A40671.png',
           },
           {
             categoryName: 'Electronics',
@@ -57,30 +58,30 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Print Volume : </span> <span>400 x 300 x 350 mm</span>
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic and Z Tilt</span>
-<span>Filament Sensor</span>`,
+<span>Filament Sensor</span>\n
+<span><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/z2-2.png"/></span>`,
             imageURL:
               'https://zaxe.com/wp-content/uploads/2021/09/Z3-e1632095337489.png',
           },
           {
             categoryName: 'Printhead',
             selected: false,
-            categoryContent: 'No data provided.',
+            categoryContent: 'E3D & Titanium  Printhead.',
             imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+              'https://zaxe.com/wp-content/uploads/2021/09/Urun-S-Mobil-Z2_Z3-Ext.png',
           },
           {
             categoryName: 'Printarea',
             selected: false,
-            categoryContent: 'No data provided.',
+            categoryContent: 'Flexible Printarea.',
             imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+              'https://zaxe.com/wp-content/uploads/2021/09/9M4A40711.png',
           },
           {
             categoryName: 'Filter',
             selected: false,
-            categoryContent: 'No data provided.',
-            imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+            categoryContent: 'New Hepa Filter.',
+            imageURL: 'https://zaxe.com/wp-content/uploads/hepa-filtre.jpg',
           },
           {
             categoryName: 'Electronics',
@@ -102,30 +103,30 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Print Volume : </span> <span>300 x 300 x 300 mm</span>
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic and Z Tilt</span>
-<span>Filament Sensor</span>`,
+<span>Filament Sensor</span>\n
+<span><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/z2-2.png"/></span>`,
             imageURL:
               'https://zaxe.com/wp-content/uploads/2021/09/Urun-sayfasi-Z3-tasarim.png',
           },
           {
             categoryName: 'Printhead',
             selected: false,
-            categoryContent: 'No data provided.',
+            categoryContent: 'E3D & Titanium Double Printhead.',
             imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+              'https://zaxe.com/wp-content/uploads/2021/09/Urun-S-Mobil-Z2_Z3-Ext.png',
           },
           {
             categoryName: 'Printarea',
             selected: false,
-            categoryContent: 'No data provided.',
+            categoryContent: 'Flexible Printarea.',
             imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+              'https://zaxe.com/wp-content/uploads/2021/09/9M4A40711.png',
           },
           {
             categoryName: 'Filter',
             selected: false,
-            categoryContent: 'No data provided.',
-            imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+            categoryContent: 'New Hepa Filter.',
+            imageURL: 'https://zaxe.com/wp-content/uploads/hepa-filtre.jpg',
           },
           {
             categoryName: 'Electronics',
