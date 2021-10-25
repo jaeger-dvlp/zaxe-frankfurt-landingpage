@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 const Contexts = React.createContext();
 class ContextProvider extends Component {
   state = {
-    selectedImage: '',
-    imageViewerStatus: '',
+    selectedImage: null,
+    imageViewerStatus: null,
     selectedPrinter: 'Z3',
     buttons: ['xlite+', 'Z3', 'Z3+', 'Materials'],
     sections: [
@@ -13,6 +13,7 @@ class ContextProvider extends Component {
         sectionCategories: [
           {
             categoryName: 'Dimensions',
+            selected: true,
             categoryContent: `<span>Single Printhead</span>
 <span class=" font-semibold">Filament Diameter : </span> <span>1.75</span>
 <span class=" font-semibold">Print Volume : </span> <span>220 x 230 x 200 mm</span>
@@ -20,11 +21,28 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic </span>
 <span>Filament Sensor</span>`,
             imageURL: 'https://zaxe.com/wp-content/uploads/2021/09/xlite-4.png',
-            selected: true,
           },
-          { categoryName: 'Printhead', categoryContent: '', selected: false },
-          { categoryName: 'Printarea', categoryContent: '', selected: false },
-          { categoryName: 'Electronics', categoryContent: '', selected: false },
+          {
+            categoryName: 'Printhead',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
+          {
+            categoryName: 'Printarea',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
+          {
+            categoryName: 'Electronics',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
         ],
       },
       {
@@ -33,6 +51,7 @@ class ContextProvider extends Component {
         sectionCategories: [
           {
             categoryName: 'Dimensions',
+            selected: true,
             categoryContent: `<span>Single Printhead</span>
 <span class=" font-semibold">Filament Diameter : </span> <span>1.75</span>
 <span class=" font-semibold">Print Volume : </span> <span>400 x 300 x 350 mm</span>
@@ -41,12 +60,35 @@ class ContextProvider extends Component {
 <span>Filament Sensor</span>`,
             imageURL:
               'https://zaxe.com/wp-content/uploads/2021/09/Z3-e1632095337489.png',
-            selected: true,
           },
-          { categoryName: 'Printhead', categoryContent: '', selected: false },
-          { categoryName: 'Printarea', categoryContent: '', selected: false },
-          { categoryName: 'Filter', categoryContent: '', selected: false },
-          { categoryName: 'Electronics', categoryContent: '', selected: false },
+          {
+            categoryName: 'Printhead',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
+          {
+            categoryName: 'Printarea',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
+          {
+            categoryName: 'Filter',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
+          {
+            categoryName: 'Electronics',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
         ],
       },
       {
@@ -54,6 +96,7 @@ class ContextProvider extends Component {
         sectionCategories: [
           {
             categoryName: 'Dimensions',
+            selected: true,
             categoryContent: `<span>Dual Independent Printhead</span>
 <span class=" font-semibold">Filament Diameter : </span> <span>1.75</span>
 <span class=" font-semibold">Print Volume : </span> <span>300 x 300 x 300 mm</span>
@@ -62,12 +105,35 @@ class ContextProvider extends Component {
 <span>Filament Sensor</span>`,
             imageURL:
               'https://zaxe.com/wp-content/uploads/2021/09/Urun-sayfasi-Z3-tasarim.png',
-            selected: true,
           },
-          { categoryName: 'Printhead', categoryContent: '', selected: false },
-          { categoryName: 'Printarea', categoryContent: '', selected: false },
-          { categoryName: 'Filter', categoryContent: '', selected: false },
-          { categoryName: 'Electronics', categoryContent: '', selected: false },
+          {
+            categoryName: 'Printhead',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
+          {
+            categoryName: 'Printarea',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
+          {
+            categoryName: 'Filter',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
+          {
+            categoryName: 'Electronics',
+            selected: false,
+            categoryContent: 'No data provided.',
+            imageURL:
+              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+          },
         ],
       },
       {
@@ -75,43 +141,43 @@ class ContextProvider extends Component {
         sectionCategories: [
           {
             categoryName: 'Zaxe PLA',
+            selected: true,
             categoryContent: `<span>Zaxe PLA is lorem ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>`,
             imageURL: 'https://zaxe.com/public/svg-main/naturalFla.png',
-            selected: true,
           },
           {
             categoryName: 'Zaxe ABS',
+            selected: false,
             categoryContent: `<span>Zaxe PLA is lorem ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>`,
             imageURL: 'https://zaxe.com/public/svg-main/blueFla.png',
-            selected: false,
           },
           {
             categoryName: 'Zaxe PETG',
+            selected: false,
             categoryContent: `<span>Zaxe PLA is lorem ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>`,
             imageURL: 'https://zaxe.com/public/svg-main/greenFla.png',
-            selected: false,
           },
           {
             categoryName: 'Zaxe FLEX',
+            selected: false,
             categoryContent: `<span>Zaxe PLA is lorem ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>
 <span class=" font-semibold">Lorem : </span> <span>ipsum</span>`,
             imageURL: 'https://zaxe.com/public/svg-main/yellowFla.png',
-            selected: false,
           },
         ],
       },
@@ -130,20 +196,19 @@ class ContextProvider extends Component {
   };
 
   setContent = (selectedPrinterIncoming, contentButtonInner) => {
-    this.setState((prev) =>
-      this.state.sections.map((section) => {
-        if (section.sectionName === selectedPrinterIncoming) {
-          section.sectionCategories.map((category) => {
-            console.log(category.selected);
-            if (category.categoryName === contentButtonInner) {
-              category.selected = true;
-            } else if (category.categoryName !== contentButtonInner) {
-              category.selected = false;
+    this.state.sections.map((section) => {
+      if (section.sectionName === selectedPrinterIncoming) {
+        section.sectionCategories.map((category) => {
+          if (category.categoryName === contentButtonInner) {
+            if (category.selected !== true) {
+              this.setState((prev) => (category.selected = true));
             }
-          });
-        }
-      })
-    );
+          } else {
+            this.setState((prev) => (category.selected = false));
+          }
+        });
+      }
+    });
   };
 
   render() {
