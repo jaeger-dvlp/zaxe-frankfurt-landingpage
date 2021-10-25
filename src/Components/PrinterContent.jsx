@@ -5,7 +5,6 @@ import Contexts from '../ContextApi';
 export default function PrinterContent() {
   const { selectedPrinter, sections, setImage, setImageStatus } =
     useContext(Contexts);
-  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const activateImageViewer = (e) => {
     setImage(e.target.getAttribute('src'));
