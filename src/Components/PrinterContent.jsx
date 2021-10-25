@@ -20,7 +20,7 @@ export default function PrinterContent() {
             <div
               key={`${selectedPrinter}${sect.sectionName}Content`}
               className="flex flex-wrap printerContentSection  p-0"
-              style={{ minHeight: '24rem' }}
+              style={{ minHeight: '23rem', maxHeight: '23rem' }}
             >
               <div
                 className="md:w-1/2 w-full p-3 items-start content-start flex flex-wrap justify-start"
