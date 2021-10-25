@@ -20,15 +20,15 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic </span>
 <span>Filament Sensor</span>
-<span><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/xlite-2.png"/></span>`,
+<span style='position: relative !important;top: 10px !important;'><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/xlite-2.png"/></span>`,
             imageURL: 'https://zaxe.com/wp-content/uploads/2021/09/xlite-4.png',
           },
           {
             categoryName: 'Printhead',
             selected: false,
-            categoryContent: 'No data provided.',
+            categoryContent: 'New E3D Printhead.',
             imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+              'https://zaxe.com/wp-content/uploads/2021/09/Mobil_cropped.png',
           },
           {
             categoryName: 'Printarea',
@@ -40,9 +40,9 @@ class ContextProvider extends Component {
           {
             categoryName: 'Electronics',
             selected: false,
-            categoryContent: 'No data provided.',
+            categoryContent: 'New Zaxe xBoard',
             imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+              'https://zaxe.com/wp-content/uploads/2021/09/xlite_anakart.png',
           },
         ],
       },
@@ -59,7 +59,7 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic and Z Tilt</span>
 <span>Filament Sensor</span>
-<span><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/z2-2.png"/></span>`,
+<span style='position: relative !important;top: 10px !important;'><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/z2-2.png"/></span>`,
             imageURL:
               'https://zaxe.com/wp-content/uploads/2021/09/Z3-e1632095337489.png',
           },
@@ -86,9 +86,9 @@ class ContextProvider extends Component {
           {
             categoryName: 'Electronics',
             selected: false,
-            categoryContent: 'No data provided.',
+            categoryContent: 'New Zaxe zBoard',
             imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+              'https://zaxe.com/wp-content/uploads/2021/09/xlite_anakart.png',
           },
         ],
       },
@@ -104,7 +104,7 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic and Z Tilt</span>
 <span>Filament Sensor</span>
-<span><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/z2-2.png"/></span>`,
+<span style='position: relative !important;top: 10px !important;'><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/z2-2.png"/></span>`,
             imageURL:
               'https://zaxe.com/wp-content/uploads/2021/09/Urun-sayfasi-Z3-tasarim.png',
           },
@@ -131,9 +131,9 @@ class ContextProvider extends Component {
           {
             categoryName: 'Electronics',
             selected: false,
-            categoryContent: 'No data provided.',
+            categoryContent: 'New Zaxe zBoard',
             imageURL:
-              'https://zaxe.com/wp-content/uploads/2021/07/zaxeLoader-1.gif',
+              'https://zaxe.com/wp-content/uploads/2021/09/xlite_anakart.png',
           },
         ],
       },
@@ -197,15 +197,20 @@ class ContextProvider extends Component {
   };
 
   setContent = (selectedPrinterIncoming, contentButtonInner) => {
-    this.state.sections.map((section) => {
+    this.state.sections.map((section, s) => {
       if (section.sectionName === selectedPrinterIncoming) {
-        section.sectionCategories.map((category) => {
+        section.sectionCategories.map((category, c) => {
           if (category.categoryName === contentButtonInner) {
             if (category.selected !== true) {
-              this.setState((prev) => (category.selected = true));
+              this.setState(
+                (prev) =>
+                  (prev.sections[s].sectionCategories[c].selected = true)
+              );
             }
           } else {
-            this.setState((prev) => (category.selected = false));
+            this.setState(
+              (prev) => (prev.sections[s].sectionCategories[c].selected = false)
+            );
           }
         });
       }
