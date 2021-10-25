@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import Contexts from '../ContextApi';
 
@@ -26,6 +26,7 @@ export default function contentNav() {
                 onClick={buttonSetContent}
                 printer={'xlite+'}
                 className="contentNavBtn activeContent"
+                content={category.categoryName}
               >
                 {i + 1} - {category.categoryName}
               </button>
