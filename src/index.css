@@ -7,7 +7,7 @@
 body,
 html {
   overflow-x: hidden !important;
-  background-color: #ecf6f8;
+  background-color: #fff /*#ecf6f8*/;
 }
 
 * {
