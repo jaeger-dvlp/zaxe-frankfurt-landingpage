@@ -9,7 +9,6 @@ export default function contentNav() {
   const buttonSetContent = (e) => {
     setContent(selectedPrinter, e.target.getAttribute('content'));
   };
-
   const contentElms = sections.map((section) => {
     if (section.sectionName === selectedPrinter) {
       return section.sectionCategories.map((category, i) => {
@@ -60,9 +59,9 @@ export default function contentNav() {
     <div
       data-aos="fade-right"
       data-aos-delay="1200"
-      className="container mx-auto p-0 py-2"
+      className="container mx-auto p-0"
     >
-      <div className="flex justify-start">{contentElms}</div>
+      <div className="flex justify-start mt-20">{contentElms}</div>
     </div>
   );
 }
