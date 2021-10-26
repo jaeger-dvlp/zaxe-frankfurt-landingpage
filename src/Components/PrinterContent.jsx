@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import Contexts from '../ContextApi';
 
 export default function PrinterContent() {
-  const { selectedPrinter, sections, setImage, setImageStatus } =
+  const { selectedPrinter, sections, setImage, setImageStatus, fadeEffect } =
     useContext(Contexts);
 
   const activateImageViewer = (e) => {
@@ -13,12 +13,12 @@ export default function PrinterContent() {
 
   const elm = sections.map((sect) => {
     if (sect.sectionName === selectedPrinter) {
-      return sect.sectionCategories.map((cont) => {
+      return sect.sectionCategories.map((cont, k) => {
         if (cont.selected === true) {
           return (
             <div
-              key={`${selectedPrinter}${sect.sectionName}Content`}
-              className="flex flex-wrap printerContentSection  p-0"
+              key={`${selectedPrinter}${k}${sect.sectionName}Content`}
+              className={`${fadeEffect} flex flex-wrap printerContentSection p-0`}
               style={{ minHeight: '23rem', maxHeight: '23rem' }}
             >
               <div
