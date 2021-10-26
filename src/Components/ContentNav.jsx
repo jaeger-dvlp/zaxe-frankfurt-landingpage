@@ -17,6 +17,8 @@ export default function contentNav() {
             <div
               data-aos="fade-down"
               data-aos-delay={`150` * i}
+              data-aos-duration="500"
+              data-aos-easing="ease-in-out-back"
               className="p-3"
               key={`${category.categoryName}ContentButton`}
             >
@@ -26,8 +28,9 @@ export default function contentNav() {
                 printer={'xlite+'}
                 className="contentNavBtn activeContent"
                 content={category.categoryName}
+                disabled="disabled"
               >
-                {i + 1} - {category.categoryName}
+                {category.categoryName}
               </button>
             </div>
           );
@@ -36,6 +39,8 @@ export default function contentNav() {
             <div
               data-aos="fade-down"
               data-aos-delay={`150` * i}
+              data-aos-duration="500"
+              data-aos-easing="ease-in-out-back"
               className="p-3"
               key={`${category.categoryName}ContentButton`}
             >
@@ -46,7 +51,7 @@ export default function contentNav() {
                 className="contentNavBtn"
                 content={category.categoryName}
               >
-                {i + 1} - {category.categoryName}
+                {category.categoryName}
               </button>
             </div>
           );
