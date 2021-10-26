@@ -67,7 +67,7 @@ export default function PrinterContent() {
 
   return (
     <div
-      className="container mx-auto py-5"
+      className="container mx-auto pt-5"
       data-aos="fade-down"
       data-aos-delay="800"
       data-aos-duration="500"
