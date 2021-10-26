@@ -6,6 +6,7 @@ class ContextProvider extends Component {
     selectedImage: null,
     imageViewerStatus: null,
     selectedPrinter: 'Z3',
+    fadeEffect: 'fadeUp',
     buttons: ['xlite+', 'Z3', 'Z3+', 'Materials'],
     sections: [
       {
@@ -196,25 +197,25 @@ class ContextProvider extends Component {
     this.setState((prev) => ({ imageViewerStatus }));
   };
 
-  setContent = (selectedPrinterIncoming, contentButtonInner) => {
-    this.state.sections.map((section, s) => {
-      if (section.sectionName === selectedPrinterIncoming) {
-        section.sectionCategories.map((category, c) => {
-          if (category.categoryName === contentButtonInner) {
-            if (category.selected !== true) {
-              this.setState(
-                (prev) =>
-                  (prev.sections[s].sectionCategories[c].selected = true)
-              );
+  setContent = async (selectedPrinterIncoming, contentButtonInner) => {
+    this.setState({ fadeEffect: 'fadeDown' });
+    setTimeout(() => {
+      this.state.sections.map((section, s) => {
+        if (section.sectionName === selectedPrinterIncoming) {
+          section.sectionCategories.map((category, c) => {
+            if (category.categoryName === contentButtonInner) {
+              if (category.selected !== true) {
+                this.setState((prev) => (category.selected = true));
+              }
+            } else {
+              this.setState((prev) => (category.selected = false));
             }
-          } else {
-            this.setState(
-              (prev) => (prev.sections[s].sectionCategories[c].selected = false)
-            );
-          }
-        });
-      }
-    });
+          });
+        }
+      });
+
+      this.setState({ fadeEffect: 'fadeUp' });
+    }, 150);
   };
 
   render() {
@@ -226,6 +227,7 @@ class ContextProvider extends Component {
       sections,
       selectedImage,
       imageViewerStatus,
+      fadeEffect,
     } = this.state;
     const { setPrinter, setContent, setImage, setImageStatus } = this;
 
@@ -242,6 +244,7 @@ class ContextProvider extends Component {
           sections,
           selectedImage,
           imageViewerStatus,
+          fadeEffect,
         }}
       >
         {children}
