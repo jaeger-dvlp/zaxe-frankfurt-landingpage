@@ -61,7 +61,7 @@ export default function contentNav() {
       data-aos-delay="1200"
       className="container mx-auto p-0"
     >
-      <div className="flex justify-start mt-20">{contentElms}</div>
+      <div className="flex flex-wrap justify-start mt-20">{contentElms}</div>
     </div>
   );
 }
