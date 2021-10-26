@@ -19,7 +19,7 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Print Volume : </span> <span>220 x 230 x 200 mm</span>
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic </span>
-<span>Filament Sensor</span>
+<span>Filament Sensor</span>\n
 <span style='position: relative !important;top: 10px !important;'><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/xlite-2.png"/></span>`,
             imageURL: 'https://zaxe.com/wp-content/uploads/2021/09/xlite-4.png',
           },
@@ -58,7 +58,7 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Print Volume : </span> <span>400 x 300 x 350 mm</span>
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic and Z Tilt</span>
-<span>Filament Sensor</span>
+<span>Filament Sensor</span>\n
 <span style='position: relative !important;top: 10px !important;'><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/z2-2.png"/></span>`,
             imageURL:
               'https://zaxe.com/wp-content/uploads/2021/09/Z3-e1632095337489.png',
@@ -103,7 +103,7 @@ class ContextProvider extends Component {
 <span class=" font-semibold">Print Volume : </span> <span>300 x 300 x 300 mm</span>
 <span class=" font-semibold">Nozzle Diameters : </span> <span>0,2/0,4/0,6/0,8 mm</span>
 <span class=" font-semibold">Calibration : </span> <span>Fully Automatic and Z Tilt</span>
-<span>Filament Sensor</span>
+<span>Filament Sensor</span>\n
 <span style='position: relative !important;top: 10px !important;'><img width="300px" src="https://zaxe.com/wp-content/uploads/2021/09/z2-2.png"/></span>`,
             imageURL:
               'https://zaxe.com/wp-content/uploads/2021/09/Urun-sayfasi-Z3-tasarim.png',
